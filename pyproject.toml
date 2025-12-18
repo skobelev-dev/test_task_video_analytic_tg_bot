@@ -1,0 +1,28 @@
+[project]
+name = "test-task-video-analytic-tg-bot"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "dabil",email = "feofeonf@yandex.ru"}
+]
+readme = "README.md"
+requires-python =  ">=3.12,<3.15"
+dependencies = [
+    "sqlalchemy (>=2.0.45,<3.0.0)",
+    "aiogram (>=3.23.0,<4.0.0)",
+    "alembic (>=1.17.2,<2.0.0)",
+    "psycopg (>=3.3.2,<4.0.0)",
+    "asyncpg (>=0.31.0,<0.32.0)"
+]
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.0.2,<10.0.0)",
+    "httpx (>=0.28.1,<0.29.0)",
+    "black (>=25.12.0,<26.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
