@@ -1,6 +1,8 @@
 from aiogram import Router
 from aiogram.filters import CommandStart
 from aiogram.types import Message
+from src.logger import logger
+from src.llm import get_db_schema
 
 router = Router()
 
@@ -13,4 +15,7 @@ START_MSG = """Привет,
 
 @router.message(CommandStart())
 async def start_message(message: Message):
+    logger.info("/start has been pressed")
+    answer = await get_db_schema()
+    await message.answer(answer)
     return await message.answer(START_MSG)

@@ -1,5 +1,9 @@
 # test_task_video_analytic_tg_bot
 
+# Установка
+- `docker compose up -d ollama`
+- `docker compose exec ollama ollama pull llama3.1`
+
 # History
 
 - Установил основные зависимости
@@ -9,3 +13,5 @@
 - Добавил миграции
 - Добавил .env файл
 - Добавил /start у бота
+- добавил в зависимости langchain
+- запулил llama3.1
